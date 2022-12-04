@@ -1,0 +1,292 @@
+@font-face {
+    font-family: "minecraftia";
+    src: url(font\Minecraftia-Regular.ttf);
+}
+    
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: minecraftia, sans-serif; /* in case my font doesn't ->
+    load then all text will be sans-serif*/
+ }
+
+ ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+ }
+
+ a{/*  all elements in my list with links aka my navbar */
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* font-size: 20px; */
+    transition: 0.4s;
+ }
+
+header{
+    position: relative; 
+    width: 100%; 
+ } 
+
+
+ .top_logo{
+    position: relative;
+    max-width: 1500px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+ }
+
+
+ nav{
+    background-image: linear-gradient(rgb(0, 128, 255), rgb(0, 179, 0));
+    position: relative;
+    padding: 15px 80px;
+    z-index: 0; /* in case of other elements being hidden behind navbar */
+ }
+
+
+ .logo { /* positioning of logo is optimised for full screen PCs */
+ position: absolute;
+ width: 150px;
+ height: 150px;
+ top: -50%;
+ left: 45.5%;  
+ right: 50%;
+ }
+
+ nav ul{
+    width: 100%;
+    transition 0.4s
+ }
+
+nav ul li:nth-child(4){
+    margin-left: 250px;
+}
+
+nav ul li a{
+    color: rgb(162, 72, 42) ;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: white
+}
+
+#bg_video {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   min-width: 100%;
+   min-height: 100%;
+}
+
+/*              home page PLAY NOW button     */
+button.play{
+   position: absolute;
+   background-color: rgba(0, 230, 0, 0.5);
+   text-align: center;
+   padding: 25px 10px 0px 10px; 
+   display: inline-block;
+   font-size: 50px;
+   margin: 4px 2px;
+   cursor: pointer;
+   top: 40%;
+   left: 45%;
+   border-radius: 12px;
+}
+
+button.play:hover {
+   background-color: rgb(0, 230, 0);
+   color: white;
+}
+
+
+/*      How to play text/instructions edit   */
+h1.instructions{
+   font-size: 45px;
+   color: antiquewhite;
+   text-align: center;
+   padding-top: 60px;
+}
+h2.rules{
+   font-size: 15px;
+   padding: 20px;
+   margin: 0px 200px;
+   text-align: center;
+}
+
+mark {
+   background-color: rgba(76, 86, 95, 0.7);
+   color: antiquewhite;
+}
+
+
+
+
+/*         CSS EDITS FOR LEADERBOARD TABLE   (BELOW)   */
+
+h1.rank_title{
+   font-size: 45px;
+   color: antiquewhite;
+   text-align: center;
+   padding-top: 60px;
+
+}
+.rank_table{
+   margin: 20px;
+   font-size: 15px;
+   box-shadow: 0 0 25px rgb(0, 179, 0);
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 100px;
+   width: 60%;
+   height: 60%;
+}
+
+.rank_table thead tr {
+   background-color:	rgb(0, 230, 0);
+   color: aliceblue;
+}
+
+.rank_table th{
+   padding: 10px 12px;
+}
+
+.rank_table td{
+   padding: 10px 12px;
+}
+
+.rank_table tbody tr {
+   border-bottom: 3px solid rgb(162, 72, 42)
+   ;
+}
+
+.rank_table tbody tr:nth-of-type(odd) {
+   background-color: rgba(0, 230, 0, 0.45) ;
+}
+
+.rank_table tbody tr:nth-of-type(even) {
+   background-color: rgba(255, 255, 255, 0.7) ;
+}
+
+
+/*                    Login / Register form    */
+
+
+.login-register{
+   top: 15%;
+   left: 40%;
+   width: 500px;
+   position: absolute;
+   color: white;
+
+}
+
+.login-register input{
+   width: 500px;
+   border-radius: 6px;
+   padding: 5px 10px;
+}
+
+.login-register h1{
+   left: 10%;
+   text-align: center;
+   font-size: 30px;
+   margin: 20px 0;
+}
+
+.login-register h2{
+   left: 10%;
+   text-align: center;
+   font-size: 30px;
+   margin: 20px 0;
+}
+
+.login-register p{
+   margin: 5px 0px;
+   font-size: 15px;
+}
+
+button.login{
+   position: absolute;
+   background-color: rgb(0, 230, 0);
+   text-align: center;
+   font-size: 15px;
+   margin: 10px 15px;
+   padding: 0px 3px;
+   cursor: pointer;
+   border-radius: 5px;
+   display: block;
+}
+
+button.login:hover {
+   color: white;
+}
+
+
+button.register{
+   position: absolute;
+   background-color: rgb(0, 230, 0);
+   text-align: center;
+   font-size: 15px;
+   margin: 10px 15px;
+   padding: 0px 5px;
+   cursor: pointer;
+   border-radius: 5px;
+   display: block;
+}
+
+button.register:hover {
+   color: white;
+}
+
+.out_result p {
+   color: red;
+   padding-top: 50px;
+   font-size: 20px;
+}
+
+/*              MY ACCOUNT PAGE      */
+
+
+ .account_overview{
+   position: relative; 
+ }
+
+ .account_pfp{
+   position: relative;
+   width: 20%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   left: -20%;
+   top: 220px;
+} 
+
+.account_title{
+   top: 15%;
+   left: 40%;
+   width: 500px;
+   position: absolute;
+   color: white;
+
+}
+
+.account_overview{
+   top: 30%;
+   left: 50%;
+   width: 500px;
+   position: absolute;
+}
+
+.account_bkg{
+   background-color: rgba(75, 75, 78, 0.5);
+   color: white;
+}
+
+
+
